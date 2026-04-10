@@ -1,0 +1,301 @@
+/*
+    ESTILO GERAL DA PÁGINA
+
+    Define a fonte principal usada no site e a cor de fundo padrão.
+    Mesmo usando Bootstrap, ainda podemos personalizar a aparência com CSS próprio.
+*/
+body{
+    font-family: Arial, sans-serif;
+    background-color: #212529;
+}
+
+/*
+    COMPORTAMENTO DE ROLAGEM SUAVE
+
+    Faz a navegação ficar mais agradável quando houver links internos.
+    Neste projeto, a regra é mantida como boa prática, mesmo com páginas separadas.
+*/
+html{
+    scroll-behavior: smooth;
+}
+
+/*
+    AJUSTE DA IMAGEM PRINCIPAL
+
+    hero-image é uma classe específica da página inicial.
+    img também foi incluída para garantir comportamento semelhante caso outras imagens sejam usadas.
+
+    max-height limita a altura máxima.
+    object-fit: cover ajuda a imagem a preencher bem a área sem distorcer excessivamente.
+*/
+.hero-image,
+img{
+    max-height: 420px;
+    object-fit: cover;
+}
+
+/*
+    COR DOS TÍTULOS H2 DENTRO DO MAIN
+
+    Mantém boa legibilidade para os títulos das seções principais.
+*/
+main h2{
+    color: #212529;
+}
+
+/*
+    ESTILO DO TEXTO INTRODUTÓRIO
+
+    Limita a largura do parágrafo para melhorar leitura em telas grandes.
+    margin-left e margin-right automáticos centralizam o bloco.
+*/
+.intro-text{
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*
+    ESTILO PADRÃO DOS CARDS
+
+    transition deixa os efeitos mais suaves.
+    border-radius arredonda os cantos.
+*/
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+}
+
+/*
+    EFEITO QUANDO O MOUSE PASSA SOBRE O CARD
+
+    O card sobe levemente e recebe uma sombra mais forte.
+    Isso dá sensação de destaque visual.
+*/
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+/*
+    PERSONALIZAÇÃO DO BOTÃO PRINCIPAL
+
+    Mesmo usando a classe btn-primary do Bootstrap,
+    podemos reforçar a aparência com:
+    - padding
+    - peso da fonte
+    - borda arredondada
+    - transição para hover
+*/
+.btn-primary{
+    padding: 12px 24px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/*
+    HOVER DO BOTÃO PRINCIPAL
+
+    Aumenta levemente o botão ao passar o mouse.
+*/
+.btn-primary:hover{
+    transform: scale(1.03);
+}
+
+/*
+    COMPLEMENTO PARA BLOCOS COM FUNDO CLARO
+
+    A classe bg-light vem do Bootstrap.
+    Aqui adicionamos uma borda suave para melhorar a separação visual.
+*/
+.bg-light{
+    border: 1px solid #dee2e6;
+}
+
+/*
+    AJUSTE DOS PARÁGRAFOS INTERNOS DOS CARDS
+
+    Ajuda a manter espaçamento confortável entre blocos de texto.
+*/
+.card-text{
+    margin-bottom: 0.75rem;
+}
+
+/*
+    ESTILO DA LISTA SIMPLES DA PÁGINA DE SERVIÇOS
+
+    max-width limita a largura da lista.
+    margin: 0 auto centraliza o bloco.
+*/
+.simple-list{
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/*
+    ESPAÇAMENTO ENTRE ITENS DA LISTA
+*/
+.simple-list li{
+    margin-bottom: 0.5rem;
+}
+
+/*
+    AJUSTES DOS LINKS DO MENU
+
+    Cria melhor área de clique e arredondamento nos links da navbar.
+*/
+.navbar .nav-link{
+    border-radius: 8px;
+    padding: 0.45rem 0.9rem;
+}
+
+/*
+    DESTAQUE DO LINK ATIVO E HOVER NO MENU
+
+    nav-link.active destaca a página atual.
+    nav-link:hover melhora a resposta visual ao passar o mouse.
+*/
+.navbar .nav-link.active,
+.navbar .nav-link:hover{
+    background-color: rgba(255, 255, 255, 0.12);
+}
+
+/*Tripulação*/
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+/* Efeito de elevação apenas na página da tripulação */
+.page-tripulacao .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px; /* Deixa as pontas mais arredondadas e modernas */
+}
+
+.page-tripulacao .card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.3) !important;
+}
+
+/* Garante que as imagens fiquem padronizadas apenas nessa página */
+.page-tripulacao .card-img-top {
+    height: 280px;
+    object-fit: cover;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Estilo do botão arredondado específico */
+.page-tripulacao .btn-danger {
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+.page-contato {
+    .contact-wrapper {
+      background: white;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+    }
+
+    .contact-info {
+      background: linear-gradient(135deg, #ff0019,  #D63041);
+      padding: 40px;
+      color: white;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateX(10px);
+    }
+
+    .contact-icon {
+      width: 40px;
+      height: 40px;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      
+    }
+
+    .social-links {
+      margin-top: 30px;
+    }
+
+    .social-icon {
+      width: 35px;
+      height: 35px;
+      color: #ffffff;
+      background: rgba(255,255,255,0.2);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: white;
+      color: #D63041;
+      transform: translateY(-3px);
+    }
+
+    .contact-form {
+      padding: 40px;
+    }
+
+    .form-control {
+      border-radius: 10px;
+      padding: 12px 15px;
+      border: 2px solid #eee;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus {
+      border-color: #D63041;
+      box-shadow: none;
+    }
+
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+
+    .btn-submit {
+      background: linear-gradient(135deg, #ff0019, #D63041);
+      border: none;
+      padding: 12px 30px;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .map-container {
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 20px;
+    }
+}
